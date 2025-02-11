@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 export default function Navbar() {
 return(
-<nav className="bg-gray-800 text-white p-4 sm:p-6 md:flex md:justify-between
+<nav className="bg-[#f2f0ef] text-black p-4 sm:p-6 md:flex md:justify-between
 md:items-center">
     <div className="container mx-auto flex justify-between items-center">
     <Image
