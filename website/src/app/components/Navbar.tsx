@@ -28,7 +28,6 @@ md:items-center">
         </Link>
         </div>
     </div>
-   
 </nav>  
 )
 }
