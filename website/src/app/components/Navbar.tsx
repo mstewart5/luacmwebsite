@@ -14,16 +14,16 @@ md:items-center">
         <a href="" className="text-2xl font-bold">
         </a>    
         <div className="hidden md:flex">
-        <Link href="/" className="mx-2 hover:text-gray-300">
+        <Link href="/About" className="mx-2 hover:text-gray-300">
         About
         </Link>
-        <Link href="/" className="mx-2 hover:text-gray-300">
+        <Link href="/Membership" className="mx-2 hover:text-gray-300">
         Memberships
         </Link>
-        <Link href="/" className="mx-2 hover:text-gray-300">
+        <Link href="/Events" className="mx-2 hover:text-gray-300">
         Events
         </Link>
-        <Link href="/" className="mx-2 hover:text-gray-300">
+        <Link href="/Contact" className="mx-2 hover:text-gray-300">
         Contact
         </Link>
         </div>
