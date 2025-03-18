@@ -3,25 +3,15 @@
 import { useEffect } from "react";
 // Import utilities, types, and data:
 import { officers } from "@/lib/index";
-import { Officer, ImageGalleryPhoto } from "@/types/index";
+import { Officer, ImageGalleryPhoto, ImageSize } from "@/types/index";
 // Import components:
 import Image from "next/image";
 import Link from "next/link";
 import { DiamondList } from "@/components/DiamondList";
-import { ImageGallery } from "@/components/ImageGallery";
+import { EventsImageGallery } from "@/components/EventsImageGallery";
 import { OfficerBoard } from "@/components/OfficerBoard";
 import { InstagramEmbed } from "@/components/InstagramEmbed";
 import { FaDiscord, FaInstagram, FaArrowUp } from "react-icons/fa";
-
-const galleryPhotos: ImageGalleryPhoto[] = [
-  { path: "images/gallery/placeholder_01.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_01.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_02.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_01.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_01.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_02.jpg", link: "#", description: "Placeholder" },
-  { path: "images/gallery/placeholder_01.jpg", link: "#", description: "Placeholder" },
-];
 
 const missionItems: string[] = [
   "Foster innovation in computing and technology",
@@ -95,8 +85,9 @@ export default function AboutPage() {
       {/* Information about our ACM student chapter: */}
       <div className="bg-[#f2f0ef] p-8 mt-4 max-w-6xl mx-auto rounded-lg shadow">
         <h1 className="text-3xl text-center font-black text-black">About Our ACM Student Chapter</h1>
-        <p className="text-xl text-center mt-4">We are the Lamar University ACM Student Chapter!  As an ACM student chapter, we aim to bring the mission of the international ACM directly to you at your campus.</p>
-
+        <p className="text-xl text-center mt-4">
+          We are the <b>Lamar University ACM Student Chapter!</b> As an ACM student chapter, we aim to bring the mission of the international ACM directly to you at your campus. Our chapter is dedicated to fostering a collaborative environment where students can enhance their technical skills, engage in cutting-edge research, and connect with industry professionals. Through workshops, competitions, networking events, and mentorship opportunities, we strive to inspire innovation, promote ethical computing, and prepare students for successful careers in technology.
+        </p>
         <div className="flex justify-between w-full gap-8 mt-6">
           <div className="flex-1">
             <h2 className="text-2xl font-black text-black text-center mb-4">Events</h2>
@@ -104,7 +95,7 @@ export default function AboutPage() {
           </div>
           <div className="flex-1">
             <h2 className="text-2xl font-black text-black text-center mb-4">Event Gallery</h2>
-            <ImageGallery photos={galleryPhotos} />
+            <EventsImageGallery />
           </div>
         </div>
 

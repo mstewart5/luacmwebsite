@@ -1,60 +1,64 @@
-import { ImageGalleryPhoto } from "@/types/index";
+import { ImageGalleryPhoto, ImageSize } from "@/types/index";
+import Tooltip, { TooltipPositionfrom } from "@/components/Tooltip";
 
-// This image gallery isn't completed yet. It is intended to be a masonry grid.
+// Function to distribute images into columns for a masonry grid
+function createMasonryColumns(photos: ImageGalleryPhoto[], numCols: number): ImageGalleryPhoto[][] {
+  const columns: ImageGalleryPhoto[][] = Array.from({ length: numCols }, () => []);
 
-export function ImageGallery({ photos }: { photos: ImageGalleryPhoto[] }) {
-  return (
-    <div className="masonry sm:masonry-sm md:masonry-md p-5">
-      {photos.map(({ path, link, description }, index) => (
-        <div key={index} className="break-inside p-2">
-          <img src={path} alt={`${description}`} loading="lazy" className="rounded-lg w-full h-auto object-cover" />
-        </div>
-      ))}
-    </div>
-  );
+  photos.forEach((photo, index) => {
+    columns[index % numCols].push(photo);
+  });
+
+  return columns;
 }
 
-/*<div class="bg-transparent dark:bg-gray-800 h-screen h-full py-6 sm:py-8 lg:py-12">
-      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
-          {photos.map(({ path, link, description }, index) => (
-            <a href={link}
-               className="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
-               <img src={path} alt={`${description}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
-                <div
-                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
-                </div>
-                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">{description}</span>
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
- */
-
-/* <a href={link}>
-<span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">{description}</span>
-</a>
-*/
-
-/*function ImageGallery({ photos }: { photos: ImageGalleryPhoto[] }) {
+export function ImageGallery({ photos, columns = 3 }: { photos: ImageGalleryPhoto[]; columns?: number }) {
+  const columnPhotos = createMasonryColumns(photos, columns);
   return (
-    <div className="p-5 sm:p-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[64px]">
-        {photos.map(({ path, link, description }, index) => (
-          <a key={index} href={link || "#"} target="_blank" rel="noopener noreferrer" className="block">
-            <img
-              src={path}
-              alt={description}
-              loading="lazy"
-              className="rounded-lg w-full h-auto object-cover"
-              style={{
-                gridRowEnd: `span ${Math.floor(Math.random() * 2) + 2}`, // Random height
-              }}
-            />
-          </a>
+    <div className="w-full flex justify-center">
+      <div 
+        className={`grid gap-4 auto-rows-min mx-auto w-full max-w-5xl
+          ${columns === 2 ? 'grid-cols-2' : 
+            columns === 3 ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3' : 
+            columns === 4 ? 'grid-cols-2 md:grid-cols-4' : 
+            'grid-cols-1 sm:grid-cols-2 md:grid-cols-3'}`
+        }
+      >
+        {columnPhotos.map((col, colIndex) => (
+          <div key={`col-${colIndex}-${col.length > 0 ? col[0].path : "empty"}`} className="flex flex-col gap-4">
+{col.map(({ path, link, description, size }, index) => (
+  description ? ( // Only render Tooltip if description exists
+    <Tooltip key={`img-${index}-${path}`} text={description}>
+      <img
+        src={path}
+        alt={description}
+        loading="lazy"
+        className={`w-full rounded-lg object-cover bg-[#f1f1f1] ${
+          size === ImageSize.SMALL ? "h-20 md:h-32" :
+          size === ImageSize.MEDIUM ? "h-36 md:h-48" :
+          "h-56 md:h-64" // Default to LARGE
+        }`}
+      />
+    </Tooltip>
+  ) : (
+    <img
+      key={`img-${index}-${path}`}
+      src={path}
+      alt=""
+      loading="lazy"
+      className={`w-full rounded-lg object-cover bg-[#f1f1f1] ${
+        size === ImageSize.SMALL ? "h-20 md:h-32" :
+        size === ImageSize.MEDIUM ? "h-36 md:h-48" :
+        "h-56 md:h-64" // Default to LARGE
+      }`}
+    />
+  )
+))}
+			
+          </div>
         ))}
       </div>
     </div>
   );
-}*/
+}
+

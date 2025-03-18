@@ -11,9 +11,17 @@ export interface Officer {
   //photoUrl?: string;  // Optional profile picture
 }
 
+export enum ImageSize {
+  SMALL = "small",
+  MEDIUM = "medium",
+  LARGE = "large",
+}
+
 /* Interface containing data for image gallery photos. */
 export interface ImageGalleryPhoto {
   path: string; // Path to image
   link: string; // Link for image click
-  description: string; // Image description
+  description?: string; // Image description (optional)
+  size?: ImageSize; // (optional)
 };
+
