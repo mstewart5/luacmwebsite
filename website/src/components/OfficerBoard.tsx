@@ -1,4 +1,5 @@
 import { Officer } from "@/types/index";
+import Tooltip from "@/components/Tooltip";
 
 /**
  * Component for displaying officer headshots in a grid.
@@ -10,10 +11,11 @@ export function OfficerBoard({ officers }: { officers: Officer[] }) {
         <div key={index} className="bg-gray-100 p-4 rounded-lg shadow">
           <img src={image} alt={`${name}'s photo`} className="max-h-full m-auto h-64 object-cover rounded-[50%] mb-2" />
           <h3 className="font-semibold text-xl">{name}</h3>
-          <p className="text-gray-600 text-lg group relative inline-block underline duration-300">
-            {position}
-            <span className="absolute hidden group-hover:flex left-1/2 -translate-x-1/2 -top-2 top-full mt-2 w-64 px-2 py-1 bg-gray-700 rounded-lg text-center text-white font-medium">{positionDesc}</span>
-          </p>
+          <Tooltip text={positionDesc} className="w-full">
+            <p className="text-gray-600 text-lg text-center mx-auto block underline duration-300">
+              {position}
+            </p>
+          </Tooltip>
         </div>
       ))}
     </div>

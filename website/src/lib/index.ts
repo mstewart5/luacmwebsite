@@ -13,19 +13,19 @@ export const officers: Officer[] = [
     name: "Michael Stewart",
     position: "Vice President",
     positionDesc: "Assumes presidential duties when needed, coordinates committees, and assists in representing the organization.",
-    image: "/images/officers/joedee_blaugh_2025.jpg",
+    image: "/images/officers/michael_stewart_2025.png",
   },
   {
     name: "Rohini Rai",
     position: "Secretary",
     positionDesc: "Maintains attendance and meeting records, handles correspondence, and coordinates publicity.",
-    image: "/images/officers/joedee_blaugh_2025.jpg",
+    image: "/images/officers/rohini_rai_2025.jpg",
   },
   {
     name: "Angel Conde",
     position: "Treasurer",
     positionDesc: "Manages financial transactions, presents financial reports, and oversees fundraising efforts.",
-    image: "/images/officers/joedee_blaugh_2025.jpg",
+    image: "/images/officers/angel_conde_2025.png",
   },
   {
     name: "Brian Hoffpauir",
