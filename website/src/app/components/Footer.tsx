@@ -14,25 +14,26 @@ export default function Footer() {
       {/* First row in the footer */}
       <div className="flex justify-around items-start w-full">
         <div className="text-left">
-          <h3 className="font-semibold">useful links</h3>
+          <h3 className="text-lg font-semibold">Useful Links</h3>
           <ul className="list-none">
             <li><Link href="/dashboard" className="hover:underline">ACM on LU Hub</Link></li>
             <li><Link href="/dashboard" className="hover:underline">ACM Digital Library</Link></li>
           </ul>
         </div>
         <div className="text-left">
-          <h3 className="font-bold">contact</h3>
+          <h3 className="text-lg font-bold">Contact</h3>
           <ul className="list-none">
-            <li><Link href="/dashboard" className="hover:underline">placeholder</Link></li>
+            <li><a href="mailto:acm@lamar.edu" className="hover:underline">acm@lamar.edu</a></li>
           </ul>
         </div>
         <div className="text-left">
-          <h3 className="font-bold">navigation</h3>
-          <ul className="list-none">
-            <li><Link href="/dashboard" className="hover:underline">about</Link></li>
-            <li><Link href="/dashboard" className="hover:underline">membership</Link></li>
-            <li><Link href="/dashboard" className="hover:underline">events</Link></li>
-            <li><Link href="/dashboard" className="hover:underline">contact</Link></li>
+          <h3 className="text-lg font-bold">Navigation</h3>
+  		  <ul className="list-none">
+		    <li><Link href="/" className="hover:underline">Home</Link></li>	  
+            <li><Link href="/about" className="hover:underline">About</Link></li>
+            <li><Link href="/membership" className="hover:underline">Membership</Link></li>
+            <li><Link href="/events" className="hover:underline">Events</Link></li>
+            <li><Link href="/contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
       </div>
@@ -58,7 +59,7 @@ export default function Footer() {
           {/* className="flex items-center bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-900"
             className="flex flex-col w-full sm:w-fit px-12 py-3 items-center text-white text-center text-2xl rounded-full bg-primary hover:bg-secondary transition-all" */}
           <button onClick={scrollToTop}
-                  className="flex w-full sm:w-fit px-12 py-3 items-center text-white text-center text-2xl rounded-full bg-gray-700 hover:bg-gray-900 transition-all">
+                  className="flex w-full sm:w-fit px-12 py-3 items-center text-white text-center text-xl rounded-full bg-gray-700 hover:bg-gray-900 transition-all">
             <FaArrowUp className="mr-2" /> Top
           </button>
         </div>
