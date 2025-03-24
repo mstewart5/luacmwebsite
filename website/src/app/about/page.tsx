@@ -120,7 +120,7 @@ export default function AboutPage() {
 
       {/* Information about the current student officers: */}
       <div className="p-8 mt-4 max-w-6xl mx-auto text-center">
-        <h1 className="text-3xl font-black text-black">Current Officers</h1>
+        <h1 className="text-3xl font-black text-black">Current Student Officers</h1>
         <OfficerBoard officers={officers} />
       </div>
 

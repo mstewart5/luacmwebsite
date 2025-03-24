@@ -37,6 +37,6 @@ export const officers: Officer[] = [
     name: "Stephen Matherne",
     position: "Event Coordinator",
     positionDesc: "Leads the Events Committee, organizes events, and coordinates with university event services.",
-    image: "/images/officers/joedee_blaugh_2025.jpg",
+    image: "/images/officers/stephen_matherne_2025.png",
   },
 ];
