@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar"; // Import your Navbar component
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+
+// If loading a variable font, you don't need to specify the font weight
+const plexSans = IBM_Plex_Sans({
+  weight: "400",
+  subsets: ["latin"]
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -26,10 +31,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${plexSans.className} ${plexMono.className} antialiased`}
       >
-        <Navbar /> {/* Add your Navbar component here */}
+
+
+
+        <Navbar />
+
         {children}
+        <Footer />
       </body>
     </html>
   );
