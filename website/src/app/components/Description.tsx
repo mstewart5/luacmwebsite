@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Description() {
   return (
      <div className="bg-[#f2f0ef] p-6 flex justify-around items-start w-full mt-4">
-        <div id="Parent div" className="flex flex-row gap-4">
+        <div id="Parent div" className="flex md:flex-row sm:flex-col gap-4">
           <div id="Image" className="order-last">
             <Image
               className="rounded-xl"
