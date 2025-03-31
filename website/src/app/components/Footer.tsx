@@ -13,13 +13,16 @@ export default function Footer() {
     <footer className="bg-[#f2f0ef] p-6">
       {/* First row in the footer */}
       <div className="flex justify-around items-start w-full">
+
         <div className="text-left">
           <h3 className="text-lg font-semibold">Useful Links</h3>
+
           <ul className="list-none">
             <li><Link href="/dashboard" className="hover:underline">ACM on LU Hub</Link></li>
             <li><Link href="/dashboard" className="hover:underline">ACM Digital Library</Link></li>
           </ul>
         </div>
+
         <div className="text-left">
           <h3 className="text-lg font-bold">Contact</h3>
           <ul className="list-none">
@@ -27,6 +30,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="text-left">
+
           <h3 className="text-lg font-bold">Navigation</h3>
   		  <ul className="list-none">
 		    <li><Link href="/" className="hover:underline">Home</Link></li>	  
