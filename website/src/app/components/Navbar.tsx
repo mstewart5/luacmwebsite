@@ -15,9 +15,9 @@ export default function Navbar() {
         <nav className="bg-[#f2f0ef] text-black p-4 sm:p-6 md:flex md:justify-between md:items-center">
             <div className="container mx-auto flex justify-between items-center">
                 <Image
-                    src="/images/logo.png"
-                    height="100"
-                    width="100"
+                    src="/images/art/lamar-university-acm-v5-with-rt-sym.png"
+                    height="150"
+                    width="150"
                     alt="acmlogo"
                 />
                 <div className="md:hidden">
