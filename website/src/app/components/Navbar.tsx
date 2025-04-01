@@ -19,6 +19,7 @@ export default function Navbar() {
                     height="150"
                     width="150"
                     alt="acmlogo"
+   				    className="min-w-[100px] min-h-[100px] w-[150px] h-auto sm:w-[120px] md:w-[150px]"
                 />
                 <div className="md:hidden">
                     {!isMenuOpen && (
@@ -28,7 +29,7 @@ export default function Navbar() {
                     )}
                 </div>
                 <div className="hidden md:flex space-x-6">
-                    <Link href="/About" className="hover:text-gray-500">About</Link>
+                    <Link href="/about" className="hover:text-gray-500">About</Link>
                     <Link href="/Membership" className="hover:text-gray-500">Memberships</Link>
                     <Link href="/Events" className="hover:text-gray-500">Events</Link>
                     <Link href="/Contact" className="hover:text-gray-500">Contact</Link>
