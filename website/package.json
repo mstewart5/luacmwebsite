@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "next": "15.1.6",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.4.0",
+    "react-modal-image": "^2.6.0",
+    "react-social-media-embed": "^2.5.18"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

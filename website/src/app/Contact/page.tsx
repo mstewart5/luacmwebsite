@@ -22,7 +22,26 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
+	console.log(formData);
+
+	try {
+	  const res = await fetch("/api/send-email", {
+		method: "POST",
+		headers: {
+		  "Content-Type": "application/json",
+		},
+		body: JSON.stringify(formData),
+	  });
+
+	  /*if (res.status === 200) {
+		alert('Sent!');
+	  } else {
+		alert('Failed!');
+	  }*/
+	} catch (ex) {
+	  console.error(ex);
+	}
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -47,8 +66,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        {/* Change md:grid-cols-1 to md:grid-cols-2 if you renable the email form*/}
+        <div className="grid md:grid-cols-1 gap-16 w-full justify-center">
           {/* Contact Form */}
+{/*
           <div className="bg-[#f2f0ef] p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6 text-black">Send Us a Message</h2>
             
@@ -125,10 +146,11 @@ export default function Contact() {
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
-          </div>
+			</div>
+  */}
           
           {/* Contact Information */}
-          <div>
+          <div className="justify-center justify-self-center">
             <h2 className="text-2xl font-bold mb-6 text-black">Contact Information</h2>
             
             <div className="space-y-6">
@@ -152,7 +174,7 @@ export default function Contact() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-black">Email</h3>
-                  <p className="mt-1 text-black">acm@lamar.edu</p>
+                  <p className="mt-1 text-black"><a href="mailto:acm@lamar.edu" className="underline">acm@lamar.edu</a></p>
                   <p className="mt-1 text-black text-sm">We'll respond as soon as possible</p>
                 </div>
               </div>
@@ -162,10 +184,14 @@ export default function Contact() {
                 <h3 className="text-lg font-medium mb-4 text-black">Connect With Us</h3>
                 <div className="flex space-x-4">
                   <a href="https://instagram.com/lamar_acm/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
-                    <FaInstagram size={24} />
+	                <div className="flex-shrink-0 h-12 w-12 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
+                      <FaInstagram className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
+                    </div>
                   </a>
                   <a href="https://discord.gg/4R2jGMRxJZ" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
-                    <FaDiscord size={24} />
+				    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
+                      <FaDiscord className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
+                    </div>
                   </a>
                 </div>
               </div>
