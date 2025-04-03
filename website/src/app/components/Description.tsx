@@ -24,24 +24,36 @@ export default function Description() {
             Welcome to Lamar University's ACM chapter! ACM LU strives to be the
             place where CS students come together to level up their skills. It's
             not just about coding, it's about building a community where
-            everyone helps each other grow.<br></br><br></br>
-            Members team up on real projects, sharpen their skills in friendly/serious competitions, and connect
-            with grads who've walked the same path.<br></br><br></br>
-            Whether you want to build something awesome for your portfolio or just find your people. ACM
-            LU is the place to be for LU CS students.
+            everyone helps each other grow.<br></br>
+            <br></br>
+            Members team up on real projects, sharpen their skills in
+            friendly/serious competitions, and connect with grads who've walked
+            the same path.<br></br>
+            <br></br>
+            Whether you want to build something awesome for your portfolio or
+            just find your people. ACM LU is the place to be for LU CS students.
           </p>
 
           {/*TODO: add functionality */}
           <div className="flex flex-row justify-between">
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              Join LU ACM
-            </button>
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              Discord
-            </button>
-            <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              Instagram
-            </button>
+            <a
+              href="https://lamaracm.weebly.com/store/p4/ACM_Membership.html"
+              target="_blank"
+            >
+              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Join ACM LU
+              </button>
+            </a>
+            <a href="https://discord.com/invite/vtDGFcb" target="_blank">
+              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Discord
+              </button>
+            </a>
+            <a href="https://www.instagram.com/lamar_acm/" target="_blank">
+              <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Instagram
+              </button>
+            </a>
           </div>
         </div>
       </div>
