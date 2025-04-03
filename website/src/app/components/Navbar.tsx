@@ -1,9 +1,12 @@
 'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { PiHamburgerLight } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
-import { useState } from 'react';
+import { useState } from 'react'; 
+import { redirect } from 'next/navigation'
+ 
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +22,8 @@ export default function Navbar() {
                     height="150"
                     width="150"
                     alt="acmlogo"
-   				    className="min-w-[100px] min-h-[100px] w-[150px] h-auto sm:w-[120px] md:w-[150px]"
+   				    className="min-w-[100px] min-h-[100px] w-[150px] h-auto sm:w-[120px] md:w-[150px] cursor-pointer"
+                    onClick={() => redirect('/')}
                 />
                 <div className="md:hidden">
                     {!isMenuOpen && (
