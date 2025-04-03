@@ -9,7 +9,7 @@ export default function Description() {
             className="rounded-xl"
             src="/images/gallery/acm_possibly_2023.jpg"
             height="100"
-            width="500"
+            width="550"
             alt=""
           />
         </div>
@@ -21,17 +21,14 @@ export default function Description() {
             Lamar University's ACM Chapter
           </h1>
           <p className="text-xl text-black">
-            Welcome to Lamar University's ACM chapter! LU ACM strives to be the
+            Welcome to Lamar University's ACM chapter! ACM LU strives to be the
             place where CS students come together to level up their skills. It's
             not just about coding, it's about building a community where
-            everyone helps each other grow. Members team up on real projects,
-            sharpen their skills in friendly/serious competitions, and connect
-            with grads who've walked the same path. Whether you want to build
-            something awesome for your portfolio or just find your people. LU
-            ACM is the place to be. What makes ACM special? It's the perfect mix
-            of learning by doing and making connections that can last beyond
-            graduation. No matter where you are in your tech journey, you'll
-            find people ready to collaborate, challenge, and support you.
+            everyone helps each other grow.<br></br><br></br>
+            Members team up on real projects, sharpen their skills in friendly/serious competitions, and connect
+            with grads who've walked the same path.<br></br><br></br>
+            Whether you want to build something awesome for your portfolio or just find your people. ACM
+            LU is the place to be for LU CS students.
           </p>
 
           {/*TODO: add functionality */}

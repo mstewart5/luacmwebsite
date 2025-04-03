@@ -1,6 +1,6 @@
 export default function JoinSection() {
   return (
-    <div className="bg-[#f2f0ef]">
+    <div className="">
       <div
         className="bg-center"
         style={{
@@ -9,7 +9,7 @@ export default function JoinSection() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex flex-col justify-center items-center bg-[#f2f0ef] bg-opacity-50 backdrop-blur-sm h-full">
+        <div className="flex flex-col justify-center items-center bg-opacity-50 backdrop-blur-sm h-full bg-[#C9C8C7]">
           <h1 className="text-black font-bold text-3xl m-auto my-5 rounded m-6">
             Join LU's primary CS organization
           </h1>
@@ -25,8 +25,9 @@ export default function JoinSection() {
         <span className="bg-[#C9C8C7] px-5 rounded">FAQ</span>
       </div>
 
-      <div>
-        <h1>aura</h1>
+      <div className="">
+        <h1>&#8239;</h1> 
+        {/* This is important. */}
       </div>
     </div>
   );
