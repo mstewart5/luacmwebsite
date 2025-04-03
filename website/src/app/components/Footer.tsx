@@ -10,7 +10,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#f2f0ef] p-6">
+    <footer className="bg-[#f2f0ef] p-6 text-black">
       {/* First row in the footer */}
       <div className="flex justify-around items-start w-full">
 
