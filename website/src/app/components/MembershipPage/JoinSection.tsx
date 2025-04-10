@@ -14,9 +14,11 @@ export default function JoinSection() {
             Join LU's primary CS organization
           </h1>
           <div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-5 px-5 rounded m-8">
-              Purchase membership
-            </button>
+			<a href="https://lamaracm.weebly.com/store/p4/ACM_Membership.html" target="_blank">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-5 px-5 rounded m-8">
+                Purchase Membership
+			  </button>
+		    </a>
           </div>
         </div>
       </div>
