@@ -192,7 +192,7 @@ export default function Contact() {
                       <InstagramIcon className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
                     </div>
                   </a>
-                  <a href="https://discord.gg/4R2jGMRxJZ" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
+                  <a href="https://discord.com/invite/vtDGFcb" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
 				    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
                       <DiscordIcon className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
                     </div>

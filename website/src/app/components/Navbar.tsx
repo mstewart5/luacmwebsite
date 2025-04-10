@@ -37,9 +37,9 @@ export default function Navbar() {
                 </div>
                 <div className="hidden md:flex space-x-6">
                     <Link href="/about" className="hover:text-gray-500">About</Link>
-                    <Link href="/Membership" className="hover:text-gray-500">Memberships</Link>
-                    <Link href="/Events" className="hover:text-gray-500">Events</Link>
-                    <Link href="/Contact" className="hover:text-gray-500">Contact</Link>
+                    <Link href="/membership" className="hover:text-gray-500">Memberships</Link>
+                    <Link href="/events" className="hover:text-gray-500">Events</Link>
+                    <Link href="/contact" className="hover:text-gray-500">Contact</Link>
                 </div>
             </div>
 
@@ -48,16 +48,16 @@ export default function Navbar() {
                     <button onClick={toggleMenu} className="absolute top-6 right-6">
                         <CloseIcon className="w-12 h-12" />
                     </button>
-                    <Link href="/About" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
+                    <Link href="/about" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
                         About
                     </Link>
-                    <Link href="/Membership" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
+                    <Link href="/membership" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
                         Memberships
                     </Link>
-                    <Link href="/Events" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
+                    <Link href="/events" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
                         Events
                     </Link>
-                    <Link href="/Contact" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
+                    <Link href="/contact" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
                         Contact
                     </Link>
                 </div>
