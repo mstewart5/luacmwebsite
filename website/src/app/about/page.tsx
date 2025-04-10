@@ -32,7 +32,12 @@ const eventItems: string[] = [
   "Bi-montly General Meetings 📣",
 ];
 
-function makeLink(link: string, index: number) {
+type LinkData = {
+  href: string;
+  title: string;
+};
+
+function makeLink(link: LinkData, index: number) {
   // Transform the links into HTML <a> tags
   return (
     <a

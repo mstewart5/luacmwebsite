@@ -3,6 +3,9 @@ import React from "react";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
+const PlusIcon = FaPlus as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const MinusIcon = FaMinus as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+
 type QuestionData = {
   question: string;
   answer: string;
@@ -51,9 +54,9 @@ const data: QuestionData[] = [
 
 export default function JoinFAQ() {
 
-    const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState<number | null>(null);
 
-    const toggle = (i) => {
+    const toggle = (i: number) => {
         if (selected == i) {
             return setSelected(null)
         }
@@ -68,7 +71,7 @@ export default function JoinFAQ() {
           <div id="item" className="bg-[#C9C8C7] mt-5 mb-5 p-5">
             <div id="title" className="flex flex-row justify-between content-center text-black cursor-pointer" onClick={() => toggle(i)}>
               <h2>{item.question}</h2>
-              <span className="flex items-center">{selected == i ? <FaMinus /> : <FaPlus />}</span>
+              <span className="flex items-center">{selected == i ? <MinusIcon /> : <PlusIcon />}</span>
             </div>
             <div id="content" className={`text-black overflow-hidden transition-all duration-300 ease-in-out whitespace-pre-line  ${selected === i ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
   }`}>{item.answer}</div>

@@ -1,5 +1,5 @@
 import { ImageGalleryPhoto, ImageSize } from "@/types/index";
-import Tooltip, { TooltipPositionfrom } from "@/components/Tooltip";
+import Tooltip, { TooltipPosition } from "@/components/Tooltip";
 
 // Function to distribute images into columns for a masonry grid
 function createMasonryColumns(photos: ImageGalleryPhoto[], numCols: number): ImageGalleryPhoto[][] {

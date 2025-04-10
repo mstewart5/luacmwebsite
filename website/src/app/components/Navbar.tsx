@@ -6,7 +6,10 @@ import { PiHamburgerLight } from "react-icons/pi";
 import { IoClose } from "react-icons/io5";
 import { useState } from 'react'; 
 import { redirect } from 'next/navigation'
- 
+import { IconType } from 'react-icons';
+const HamburgerIcon = PiHamburgerLight as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const CloseIcon = IoClose as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +31,7 @@ export default function Navbar() {
                 <div className="md:hidden">
                     {!isMenuOpen && (
                         <button onClick={toggleMenu}>
-                            <PiHamburgerLight size={45} />
+                            <HamburgerIcon className="w-12 h-12"  />
                         </button>
                     )}
                 </div>
@@ -43,7 +46,7 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md flex flex-col items-center justify-center text-white text-2xl z-50">
                     <button onClick={toggleMenu} className="absolute top-6 right-6">
-                        <IoClose size={45} />
+                        <CloseIcon className="w-12 h-12" />
                     </button>
                     <Link href="/About" className="py-4 hover:text-gray-400" onClick={toggleMenu}>
                         About

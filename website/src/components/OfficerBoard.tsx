@@ -1,4 +1,4 @@
-import { Officer } from "@/types/index";
+import { Officer } from "@/types/";
 import Tooltip from "@/components/Tooltip";
 
 /**

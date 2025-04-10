@@ -1,26 +1,30 @@
 'use client';
 import { FaUsers, FaCode, FaGamepad, FaLaptopCode } from 'react-icons/fa';
+const UserIcon = FaUsers as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const CodeIcon = FaCode as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const GamepadIcon = FaGamepad as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const LaptopIcon = FaLaptopCode as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 //for monthly recurring events be sure to have isMonthly: true, monthlyWeek: week#
 const weeklyEvents = [
-  { icon: <FaCode className="text-xl" />, 
+  { icon: <CodeIcon className="text-xl" />, 
     title: 'Coding Hangout', 
     description: 'Lets hangout while we work on projects, leetcode, or homework.', 
     day: 'Wednesday', time: '16:30', endTime: '18:00' 
   },
-  { icon: <FaGamepad className="text-xl" />, 
-    title: 'Game Night', 
-    description: 'we gamin', 
-    day: 'Thursday', time: '17:00', endTime: '23:00', isMonthly: true, monthlyWeek: 1 
-  },
-  { icon: <FaUsers className="text-xl" />, 
+  // { icon: <FaGamepad className="text-xl" />, 
+  //   title: 'Game Night', 
+  //   description: 'we gamin', 
+  //   day: 'Thursday', time: '17:00', endTime: '23:00', isMonthly: true, monthlyWeek: 1 
+  // },
+  { icon: <UserIcon className="text-xl" />, 
     title: 'General Meeting', 
     description: 'Monthly update and discussion.', 
     day: 'Thursday', time: '17:00', endTime: '18:00', isMonthly: true, monthlyWeek: 2 
   },
-  { icon: <FaLaptopCode className="text-xl" />, 
+  { icon: <LaptopIcon className="text-xl" />, 
     title: 'Leetcode Practice', description: 'Algorithm problem solving sessions.', 
     day: 'Monday', time: '17:00', endTime: '18:00' 
   },

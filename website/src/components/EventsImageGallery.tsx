@@ -1,7 +1,7 @@
 import { ImageGalleryPhoto, ImageSize } from "@/types/index";
 import { ImageGallery } from "@/components/ImageGallery";
 
-export function EventsImageGallery({ photos, columns = 3 }: { photos: ImageGalleryPhoto[]; columns?: number }) {
+export function EventsImageGallery({ photos, columns = 3 }: { photos?: ImageGalleryPhoto[]; columns?: number }) {
   const galleryPhotos: ImageGalleryPhoto[] = [
 	{ path: "images/gallery/ACM_Banquet_2023_1.jpg", link: "#", description: "", size: ImageSize.MEDIUM },
 	{ path: "images/gallery/ACM_Banquet_Date_unsure_2_1.jpg", link: "#", description: "", size: ImageSize.MEDIUM },

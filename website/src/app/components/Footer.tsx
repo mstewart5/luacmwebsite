@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { FaDiscord, FaInstagram, FaArrowUp } from "react-icons/fa";
+const DiscordIcon = FaDiscord as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const InstagramIcon = FaInstagram as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
+const ArrowUpIcon = FaArrowUp as unknown as React.FC<React.SVGProps<SVGSVGElement>>;
 
 export default function Footer() {
   function scrollToTop() {
@@ -51,11 +54,11 @@ export default function Footer() {
         <div className="flex space-x-6">
           <Link href="https://discord.gg/Zkqvwtc89B" target="_blank" className="text-gray-700 hover:text-gray-900">
             {/* size={24} */}
-            <FaDiscord className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transforms" />
+            <DiscordIcon className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transforms" />
           </Link>
           <Link href="https://www.instagram.com/lamar_acm/" target="_blank" className="text-gray-700 hover:text-gray-900">
             {/* size={24} */}
-            <FaInstagram className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transform" />
+            <InstagramIcon className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transform" />
           </Link>
         </div>
         <div className="">
@@ -64,7 +67,7 @@ export default function Footer() {
             className="flex flex-col w-full sm:w-fit px-12 py-3 items-center text-white text-center text-2xl rounded-full bg-primary hover:bg-secondary transition-all" */}
           <button onClick={scrollToTop}
                   className="flex w-full sm:w-fit px-12 py-3 items-center text-white text-center text-xl rounded-full bg-gray-700 hover:bg-gray-900 transition-all">
-            <FaArrowUp className="mr-2" /> Top
+            <ArrowUpIcon className="mr-2" /> Top
           </button>
         </div>
       </div>

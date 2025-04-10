@@ -1,10 +1,11 @@
 'use client';
 import { FaUsers } from 'react-icons/fa';
+const UserIcon = FaUsers as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 //use for events that happen less then once per month
 const specialEvents = [
   {
-    icon: <FaUsers className="text-xl" />,
+    icon: <UserIcon className="text-xl" />,
     title: 'ACM Banquet',
     description: 'Lamar University CICE Building Room 113 A & B, 5091 Rolfe Christopher DR, Beaumont, TX 77710. Tickets $5 off until March.',
     datetime: 'Friday April 11, 2025 at 5:00 PM'

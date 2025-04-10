@@ -1,8 +1,12 @@
 'use client'
 
 import { useState } from 'react';
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiMail, FiMap, FiMapPin, FiPhone } from 'react-icons/fi';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaDiscord } from 'react-icons/fa';
+const MailIcon = FiMail as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const MapIcon = FiMapPin as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const InstagramIcon = FaInstagram as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+const DiscordIcon = FaDiscord as unknown as React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -156,7 +160,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
-                  <FiMapPin className="h-6 w-6 text-black" />
+                  <MapIcon className="h-6 w-6 text-black" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-black">Location</h3>
@@ -170,7 +174,7 @@ export default function Contact() {
               
               <div className="flex items-start">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
-                  <FiMail className="h-6 w-6 text-black" />
+                  <MailIcon className="h-6 w-6 text-black" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-black">Email</h3>
@@ -185,12 +189,12 @@ export default function Contact() {
                 <div className="flex space-x-4">
                   <a href="https://instagram.com/lamar_acm/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
 	                <div className="flex-shrink-0 h-12 w-12 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
-                      <FaInstagram className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
+                      <InstagramIcon className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
                     </div>
                   </a>
                   <a href="https://discord.gg/4R2jGMRxJZ" target="_blank" rel="noopener noreferrer" className="text-black hover:text-black">
 				    <div className="flex-shrink-0 h-12 w-12 rounded-full bg-black bg-opacity-10 flex items-center justify-center">
-                      <FaDiscord className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
+                      <DiscordIcon className="h-8 w-8 text-black hover:scale-110 transition-transforms" />
                     </div>
                   </a>
                 </div>

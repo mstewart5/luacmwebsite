@@ -12,6 +12,7 @@ interface TooltipProps {
   text: string;
   position?: TooltipPosition;
   children: ReactNode;
+  className?: string; 
 }
 
 /* Example:
