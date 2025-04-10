@@ -64,6 +64,33 @@ const acmLinks = [
   { href: "https://learning.acm.org/", title: "ACM Learning Center" },
 ].map(makeLink); // Apply transformation into HTML
 
+function DeveloperProfiles() {
+  // List of website developers and their LinkedIn profiles/personal URLs.
+  const developers = [
+	{ name: "Michael Stewart", linkedin: "https://www.linkedin.com/in/michael-octavio-stewart/" },
+	{ name: "Brian Hoffpauir", linkedin: "https://www.bhoffpauir.com/" },
+	{ name: "Bilal Maqsood", linkedin: "https://www.linkedin.com/in/bilal-maq/" },
+	{ name: "Grayson Conger", linkedin: "https://www.linkedin.com/in/grayson-conger-80110b325/" },
+	{ name: "Mark Wilson", linkedin: "https://www.linkedin.com/in/mark-wilson-137529338/" },
+  ];
+  
+  return (
+	<div className="bg-[#f2f0ef] p-8 mt-4 mb-4 max-w-6xl mx-auto rounded-lg shadow">
+      <h1 className="text-2xl text-center font-black text-black">Website Developers</h1>
+		<p className="mt-2">The following Lamar ACM members helped create this website (completed April 2025):</p>
+	  {/* <DiamondList items={developers} /> */}
+	  <div className="mt-2">
+		{developers.map((dev, index) => (
+	      <span key={index}>
+		    <a className="underline" href={dev.linkedin} target="_blank">{dev.name}</a>
+			{(index < developers.length - 1) ? ', ' : '' }
+		  </span>
+		))}
+	  </div>
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
@@ -177,7 +204,10 @@ export default function AboutPage() {
             Follow Us On Instagram!
           </h1>
           <InstagramEmbed permalink="https://www.instagram.com/lamar_acm/" />
-        </div>
+		</div>
+
+	    {/* Developer profiles section */}
+	    <DeveloperProfiles />
       </div>
     </>
   );
