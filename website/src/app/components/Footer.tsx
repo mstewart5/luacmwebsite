@@ -21,8 +21,10 @@ export default function Footer() {
           <h3 className="text-lg font-semibold">Useful Links</h3>
 
           <ul className="list-none">
-            <li><Link href="/dashboard" className="hover:underline">ACM on LU Hub</Link></li>
-            <li><Link href="/dashboard" className="hover:underline">ACM Digital Library</Link></li>
+            <li><a href="https://luhub.lamar.edu/ACM/club_signup" target="_blank" className="hover:underline">ACM on LU Hub</a></li>
+            <li><a href="https://libproxy.lamar.edu/login?url=https://www.acm.org/dl" target="_blank" className="hover:underline">ACM Digital Library</a></li>
+            <li><a href="https://www.acm.org/" target="_blank" className="hover:underline">ACM Official Website</a></li>
+            <li><a href="https://www.acm.org/publications" target="_blank" className="hover:underline">ACM Publications</a></li>
           </ul>
         </div>
 
@@ -52,7 +54,7 @@ export default function Footer() {
       <div className="flex justify-between items-center w-full">
         {/* Social median icons on the left */}
         <div className="flex space-x-6">
-          <Link href="https://discord.gg/Zkqvwtc89B" target="_blank" className="text-gray-700 hover:text-gray-900">
+          <Link href="https://discord.com/invite/vtDGFcb" target="_blank" className="text-gray-700 hover:text-gray-900">
             {/* size={24} */}
             <DiscordIcon className="w-8 h-8 sm:w-12 sm:h-12 hover:scale-110 transition-transforms" />
           </Link>
